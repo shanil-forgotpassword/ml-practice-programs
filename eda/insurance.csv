@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Medical Cost Personal Datasets | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Insurance Forecast by using Linear Regression" />
+    <meta name="keywords" content="education,health,finance,insurance,healthcare" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==" type="text/javascript">
+    window["pageRequestStartTime"] = 1781856929698;
+    window["pageRequestEndTime"] = 1781856929703;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==" id="gsi-client" src="https://accounts.google.com/gsi/client" async defer></script>
+  <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==">window.KAGGLE_JUPYTERLAB_PATH = "/static/assets/jupyterlab-v4/jupyterlab-index-7c2294f356db2c39.html";</script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+    <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" id="dynamic-favicon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/mirichoi0218/insurance" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=a53f951c511cf82e" />
+
+  
+    
+ 
+      <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets',
+            'user_properties': {
+                'logged_in': false,
+            }
+        });
+    </script>
+    <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/mirichoi0218/insurance" />
+    <meta property="og:title" content=" Medical Cost Personal Datasets" />
+    <meta property="og:description" content="Insurance Forecast by using Linear Regression" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+        <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/13720/18513/71003abbbd54cc65c64065c1de79a9ff/dataset-card.jpg?t=2018-02-21-00-25-33" />
+        <meta property="twitter:image" content="https://storage.googleapis.com/kaggle-datasets-images/13720/18513/71003abbbd54cc65c64065c1de79a9ff/dataset-card.jpg?t=2018-02-21-00-25-33" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="f+xFnMg8SiNKsREeol+r5A==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":" Medical Cost Personal Datasets","description":"## Context\nMachine Learning with R by Brett Lantz is a book that provides an introduction to machine learning using R. As far as I can tell, Packt Publishing does not make its datasets available online unless you buy the book and create a user account which can be a problem if you are checking the book out from the library or borrowing the book from a friend. All of these datasets are in the public domain but simply needed some cleaning up and recoding to match the format in the book.\n\n## Content\n**Columns**\n - age: age of primary beneficiary \n\n - sex: insurance contractor gender, female, male \n\n - bmi: Body mass index, providing an understanding of body, weights that are relatively high or low relative to height,\n            objective index of body weight (kg / m ^ 2) using the ratio of height to weight, ideally 18.5 to 24.9 \n\n - children: Number of    children covered by health insurance / Number of dependents\n\n - smoker: Smoking\n\n - region: the beneficiary's residential area in the US, northeast, southeast, southwest, northwest.\n\n - charges: Individual medical costs billed by health insurance\n\n## Acknowledgements\n\nThe dataset is available on GitHub [here](https://github.com/stedy/Machine-Learning-with-R-datasets).\n\n## Inspiration\nCan you accurately predict insurance costs?","url":"https://www.kaggle.com/mirichoi0218/insurance","version":1,"keywords":["subject, people and society, education","subject, health and fitness, health","subject, people and society, business, finance","subject, people and society, business, finance, insurance","subject, health and fitness, health, healthcare"],"license":{"@type":"CreativeWork","name":"Database: Open Database, Contents: Database Contents","url":"http://opendatacommons.org/licenses/dbcl/1.0/"},"identifier":["13720"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Miri Choi","url":"https://www.kaggle.com/mirichoi0218","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1616098-kg.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/mirichoi0218/insurance/download?datasetVersionNumber=1","contentSize":"16425 bytes"}],"commentCount":19,"dateModified":"2018-02-21T00:15:14.117Z","discussionUrl":"https://www.kaggle.com/mirichoi0218/insurance/discussion","alternateName":"Insurance Forecast by using Linear Regression","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/13720/18513/71003abbbd54cc65c64065c1de79a9ff/dataset-card.jpg?t=2018-02-21-00-25-33","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":19},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":412133},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":1995040},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":3253}]}</script>
+
+
+  
+    
+
+  
+    
+
+
+
+    <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="f+xFnMg8SiNKsREeol+r5A==" src="/static/assets/runtime.js?v=3b0ab57591a55ac6"></script>
+  <script nonce="f+xFnMg8SiNKsREeol+r5A==" src="/static/assets/vendor.js?v=905bf57c71113195"></script>
+  <script nonce="f+xFnMg8SiNKsREeol+r5A==" src="/static/assets/app.js?v=4945306b7abb1f08"></script>
+    <script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+<body>
+  <div id="root">
+    
+
+
+
+
+
+
+
+
+<script nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    jax: ['input/TeX', 'output/SVG'],
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="f&#x2B;xFnMg8SiNKsREeol&#x2B;r5A==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    // Always use the production asset in local dev, which is served from GCS. We tried to proxy and / or serve this
+    // in a better way in localhost, but it didn't work out. See b/328073416#comment8 for details.
+    const forceProdHost = window.location.hostname === "localhost";
+    lib.src = `${forceProdHost ? "https://www.kaggle.com" : ""}/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS_SVG`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
